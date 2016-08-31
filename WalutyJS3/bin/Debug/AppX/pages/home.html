@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
+    <script src="lib/winjs-4.0.1/js/base.js"></script>
+    <script src="lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="css/default.css" rel="stylesheet" />
+    <!--<script src="js/home.js"></script>-->
+
+</head>
+<body>
+    <div>Content goes here MADAFAKING PEJDŻ HOMEE!!!.</div>
+    <div id="some-div" style="visibility:visible">
+        <progress class="win-progress-ring"></progress>
+    </div>
+
+    <div>
+        <select class="form-control" id="year-select" ></select>
+        <select class="form-control" id="date-select" onChange="onDateSelection()"></select>
+    </div>
+    <div class="waiting-text" id="waitingText">Pobieranie danych. Proszę czekać...</div>
+
+    <div id="sample">
+        <!-- Simple template for the ListView instantiation  -->
+        <div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+            <div class="smallListIconTextItem">
+                <img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
+                <span class="smallListIconTextItem-Detail title">
+                    <span class="win-h4" data-win-bind="textContent: title"></span>
+                </span>
+                <span class="smallListIconTextItem-Detail ">
+                    <span class="win-h6" data-win-bind="textContent: text"></span>
+                </span>
+            </div>
+        </div>
+
+        <!-- The declarative markup necesary for ListView instantiation -->
+        <!-- Call WinJS.UI.processAll() in your initialization code -->
+        <div id="listView"
+             class="win-selectionstylefilled"
+             data-win-control="WinJS.UI.ListView"
+             data-win-options="{
+                itemDataSource: Sample.ListView.data.dataSource,
+                itemTemplate: select('.smallListIconTextTemplate'),
+                selectionMode: 'none',
+                tapBehavior: 'none',
+                layout: { type: WinJS.UI.ListLayout }
+            }">
+        </div>
+    </div>
+
+        <!-- Simple template for the ListView instantiation  -->
+        <!--<div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+                <div class="smallListIconTextItem">
+                    <img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
+                    <div class="smallListIconTextItem-Detail">
+                        <h4 class="win-h4" data-win-bind="textContent: title"></h4>
+                        <h6 class="win-h6" data-win-bind="textContent: text"></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div id="listView"
+             class="win-selectionstylefilled"
+             data-win-control="WinJS.UI.ListView"
+             data-win-options="{
+                    itemDataSource: Sample.ListView.data.dataSource,
+                    itemTemplate: select('.smallListIconTextTemplate'),
+                    selectionMode: 'none',
+                    tapBehavior: 'none',
+                    layout: { type: WinJS.UI.ListLayout }
+            }">
+        </div>-->
+</body>
+</html>

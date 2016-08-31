@@ -1,0 +1,14 @@
+﻿body {
+}
+
+.title {
+    width: 33%;
+    background-color: red;
+    position:absolute;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+ }
+.waiting-text {
+    visibility: hidden;
+}
