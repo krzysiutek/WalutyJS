@@ -1,1 +1,1 @@
-C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\WalutyJS3.jsproj;neutral
+C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\WalutyJS3.jsproj;neutral

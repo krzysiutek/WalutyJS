@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>6d4e4ed1-1ccc-4bdd-af28-fd37b648fed7</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\bld\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\bld\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>38D456CC9FE8677D6CBF7A8E76022FD9FE46C00AF0EF76BBEC978850E27343A5</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>6d4e4ed1-1ccc-4bdd-af28-fd37b648fed7_1.0.0.0_neutral__rgfnah4wmhgyp</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>6d4e4ed1-1ccc-4bdd-af28-fd37b648fed7_rgfnah4wmhgyp!App</RegisteredUserModeAppID>
@@ -19,90 +19,102 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-08-24T19:25:34.219</Modified>
+      <Modified>2016-09-05T21:42:01.585</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\index.html">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2016-08-31T18:19:32.244</Modified>
+      <Modified>2016-09-05T21:41:08.174</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\pages\home.html">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\pages\chartPage.html">
+      <PackagePath>pages\chartPage.html</PackagePath>
+      <Modified>2016-09-05T21:43:31.728</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\pages\home.html">
       <PackagePath>pages\home.html</PackagePath>
-      <Modified>2016-08-31T19:26:28.374</Modified>
+      <Modified>2016-09-05T20:48:23.190</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\images\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\images\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\images\SplashScreen.scale-200.png">
       <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\images\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\images\Square150x150Logo.scale-200.png">
       <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\images\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\images\Square44x44Logo.scale-200.png">
       <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\images\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\images\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\images\StoreLogo.png">
       <PackagePath>images\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\images\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\images\Wide310x150Logo.scale-200.png">
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\js\home.js">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\js\Chart.min.js">
+      <PackagePath>js\Chart.min.js</PackagePath>
+      <Modified>2016-09-05T21:30:44.148</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\js\chartPage.js">
+      <PackagePath>js\chartPage.js</PackagePath>
+      <Modified>2016-09-05T21:39:12.142</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\js\home.js">
       <PackagePath>js\home.js</PackagePath>
-      <Modified>2016-08-31T20:48:26.635</Modified>
+      <Modified>2016-09-05T21:27:44.570</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\js\main.js">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\js\main.js">
       <PackagePath>js\main.js</PackagePath>
-      <Modified>2016-08-31T18:39:32.600</Modified>
+      <Modified>2016-09-05T21:27:44.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\js\navigator.js">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
       <Modified>2016-08-24T19:18:20.216</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\lib\winjs-4.0.1\js\base.js">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\lib\winjs-4.0.1\js\base.js">
       <PackagePath>lib\winjs-4.0.1\js\base.js</PackagePath>
       <Modified>2016-04-18T16:42:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\lib\winjs-4.0.1\js\ui.js">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\lib\winjs-4.0.1\js\ui.js">
       <PackagePath>lib\winjs-4.0.1\js\ui.js</PackagePath>
       <Modified>2016-04-18T16:42:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\css\default.css">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2016-08-31T19:26:43.615</Modified>
+      <Modified>2016-09-05T20:08:29.957</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\lib\winjs-4.0.1\css\ui-light.css">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\lib\winjs-4.0.1\css\ui-light.css">
       <PackagePath>lib\winjs-4.0.1\css\ui-light.css</PackagePath>
       <Modified>2016-04-18T16:42:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\lib\winjs-4.0.1\css\ui-dark.css">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\lib\winjs-4.0.1\css\ui-dark.css">
       <PackagePath>lib\winjs-4.0.1\css\ui-dark.css</PackagePath>
       <Modified>2016-04-18T16:42:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS3\WalutyJS3\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Krzysiek\documents\visual studio 2015\Projects\WalutyJS3\WalutyJS3\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-08-24T19:25:33.920</Modified>
+      <Modified>2016-09-05T21:42:01.473</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

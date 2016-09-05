@@ -3,21 +3,22 @@
 (function () {
 
     var httpClient;
-    var BASE_DATES_URL = "http://www.nbp.pl/kursy/xml/dir.txt";
+    var BASE_DATES_URL = "http://www.nbp.pl/kursy/xml/";
     var dates = [];
     var xmlNames = [];
-    var dateSelect;
+    var dateSelect, yearSelect, confirmButton, listView;
     var XML_FILE_NAME = "xmlData.txt";
     var currencyList = [];
+    var dataList = [];
 
     checkConnection = function () {
         console.log("NAVIGATOR!!!!!!" + navigator.onLine);
         return navigator.onLine;
     }
 
-    function getDates() {
+    function getDates(url) {
         httpClient = new XMLHttpRequest();
-        httpClient.open('GET', BASE_DATES_URL);
+        httpClient.open('GET', url);
         httpClient.onreadystatechange = getDatesCallback;
         httpClient.send();
     }
@@ -29,21 +30,20 @@
 
             getOnlyItemsWithA(splittedResponseByLine);
 
-            fillDateSelect();
-
+            
         }
     }
 
     function onDateChange (data) {
-        var selectedItemValue = dateSelect.value;
-        getXmlFile(selectedItemValue).then(function (data) {
-            var fileContent = data;
-            if (!fileContent) {
-                downloadXml(selectedItemValue);
-            } else {
-                parseXmlFile(fileContent);
-            }
-        });
+        //var selectedItemValue = dateSelect.value;
+        //getXmlFile(selectedItemValue).then(function (data) {
+        //    var fileContent = data;
+        //    if (!fileContent) {
+        //        downloadXml(selectedItemValue);
+        //    } else {
+        //        parseXmlFile(fileContent);
+        //    }
+        //});
     }
 
     function downloadXml(xmlName) {
@@ -58,7 +58,8 @@
 
         xmlData = httpClient.responseXML;
         
-        saveXmlFile(xmlData.getElementsByTagName('kursy_walut'), xmlName);
+        //TODO: check how to save responseXML as xml file 
+        saveXmlFile(xmlData, xmlName);
 
         parseXmlFile(xmlData);
     }
@@ -82,6 +83,9 @@
         var currencyObject = {};
         var currencies;
         var i;
+
+        currencyList.length = 0; // clear array before new data will be loaded
+
         currencies = data.getElementsByTagName('pozycja');
 
         for (i = 0; i < currencies.length; i++) {
@@ -93,6 +97,12 @@
             }
             currencyList.push(currencyObject);
         }
+
+        dataList = new WinJS.Binding.List(currencyList);
+
+        listView.itemDataSource = dataList.dataSource;
+
+        // WinJS.UI.processAll();
     }
 
     function saveXmlFile(data, fileName) {
@@ -105,23 +115,71 @@
         });
     }
 
+    function fillYearSelect() {
+        var i;
+
+
+        var date = new Date();
+        var lastYear = date.getFullYear(); 
+        var firstYear = 2002; // 2002 is first year with data
+        var option;
+
+        yearSelect.options.length = 0;
+
+        for (i = lastYear; i > firstYear; i--) {
+            option = document.createElement('option');
+
+            if (i === lastYear) {
+                option.value = 'dir.txt';
+            } else {
+                option.value = 'dir' + i + '.txt';
+            }
+            option.text = i;
+
+            yearSelect.appendChild(option);
+        }
+    }
+
+    function onYearChange() {
+        var selectedYear = yearSelect.value;
+        dateSelect = document.getElementById('date-select');
+        //dateSelect.options.length = 0;
+        for (var i = 0; i < dateSelect.options.length; i++) {
+            dateSelect.options[i] = null;
+        }
+    
+        getDates(BASE_DATES_URL + selectedYear);
+    }
+
     function fillDateSelect() {
         var i;
 
-        dateSelect = document.getElementById("date-select");
-        dateSelect.addEventListener('change', onDateChange);
-
         //dateSelect.options = []; /* will no works :( */ 
-        dateSelect.options.length = 0; // clear options array 
+        for (var i = 0; i < dateSelect.options.length; i++) {
+            dateSelect.options[i] = null;
+        } // clear options array 
 
         for (i = 0; i < dates.length; i++) {
             var option = document.createElement('option');
             
             option.value = xmlNames[i];
+            console.log("XML NAME " + xmlNames[i]);
             option.text = dates[i];
 
             dateSelect.appendChild(option);
         }
+    }
+
+    function confirmDate() {
+        var selectedItemValue = dateSelect.value;
+        getXmlFile(selectedItemValue).then(function (data) {
+            var fileContent = data;
+            //if (!fileContent) {
+                downloadXml(selectedItemValue);
+            //} else {
+            //    parseXmlFile(fileContent);
+            //}
+        });
     }
 
     function getOnlyItemsWithA(items) {
@@ -136,6 +194,20 @@
         }
         dates.reverse(); // reverse array to set last date on top
         xmlNames.reverse();
+
+        fillDateSelect();
+
+    }
+
+    function listItemSelected() {
+        //WinJS.UI.Pages.define('/pages/chartPage.html', {
+        //    ready: function (element, options) {
+        console.log("HELLO");
+        
+        WinJS.Navigation.navigate("/pages/chartPage.html");
+        //    }
+        //})
+        //return nav.navigate(Application.navigator.chartPage);
     }
 
   
@@ -144,10 +216,35 @@
         ready: function (element, options) {
     
             if (checkConnection()) {
-                getDates();
+
+                yearSelect = document.getElementById('year-select');
+                yearSelect.addEventListener('change', onYearChange);
+
+                dateSelect = document.getElementById('date-select');
+                //dateSelect.addEventListener('change', onDateChange);
+
+                confirmButton = document.getElementById('confirm-date-button');
+                confirmButton.addEventListener('click', confirmDate);
+
+
+                listView = document.getElementById('listView').winControl;
+                listView.addEventListener("iteminvoked", listItemSelected);
+
+                //getDates();
+                fillYearSelect();
+
             }
         }
     });
 
+    WinJS.Namespace.define("Sample.ListView", { data: dataList });
+
     WinJS.UI.processAll();
+
+
+    
+    //WinJS.Namespace.define("Sample.ListView", kurencyList);
+    //WinJS.Namespace.define("Sample.ListView", {
+    //    data: new WinJS.Binding.List(kurencyList)
+    //});
 })();

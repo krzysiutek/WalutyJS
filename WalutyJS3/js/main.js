@@ -5,7 +5,7 @@
     var activation = Windows.ApplicationModel.Activation;
 
     var nav = WinJS.Navigation
-
+    var sessionState = WinJS.Application.sessionState;
     
 
   app.onactivated = function (args) {
@@ -20,32 +20,30 @@
           // TODO: Your code here.
           
           
-          var itemArray = [
-                { title: "Marvelous Mint", text: "Gelato", picture: "/images/fruits/60Mint.png" },
-                { title: "Succulent Strawberry", text: "Sorbet", picture: "/images/fruits/60Strawberry.png" },
-                { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
-                { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" },
-                { title: "Creamy Orange", text: "Sorbet", picture: "/images/fruits/60Orange.png" },
-                { title: "Very Vanilla", text: "Ice Cream", picture: "/images/fruits/60Vanilla.png" },
-                { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
-                { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" }
-          ];
+          //var itemArray = [
+          //      { title: "Marvelous Mint", text: "Gelato", picture: "/images/fruits/60Mint.png" },
+          //      { title: "Succulent Strawberry", text: "Sorbet", picture: "/images/fruits/60Strawberry.png" },
+          //      { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
+          //      { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" },
+          //      { title: "Creamy Orange", text: "Sorbet", picture: "/images/fruits/60Orange.png" },
+          //      { title: "Very Vanilla", text: "Ice Cream", picture: "/images/fruits/60Vanilla.png" },
+          //      { title: "Banana Blast", text: "Low-fat frozen yogurt", picture: "/images/fruits/60Banana.png" },
+          //      { title: "Lavish Lemon Ice", text: "Sorbet", picture: "/images/fruits/60Lemon.png" }
+          //];
 
-          var items = [];
+          //var items = [];
 
-          // Generate 160 items
-          for (var i = 0; i < 20; i++) {
-              itemArray.forEach(function (item) {
-                  items.push(item);
-              });
-          }
-
-
-          WinJS.Namespace.define("Sample.ListView", {
-              data: new WinJS.Binding.List(items)
+          //// Generate 160 items
+          //for (var i = 0; i < 20; i++) {
+          //    itemArray.forEach(function (item) {
+          //        items.push(item);
+          //    });
+          //}
+          var exitButton = document.getElementById('exitButton');
+          exitButton.addEventListener('click', function () {
+              console.log("Exit button clicked");
+              // TODO: close app
           });
-
-          WinJS.UI.processAll();
 
 
           return nav.navigate(Application.navigator.home);

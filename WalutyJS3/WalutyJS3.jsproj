@@ -67,6 +67,8 @@
     <Content Include="images\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="images\StoreLogo.png" />
     <Content Include="images\Wide310x150Logo.scale-200.png" />
+    <Content Include="js\Chart.min.js" />
+    <Content Include="js\chartPage.js" />
     <Content Include="js\home.js" />
     <Content Include="js\main.js" />
     <Content Include="css\default.css" />
@@ -75,6 +77,7 @@
     <Content Include="lib\winjs-4.0.1\js\ui.js" />
     <Content Include="lib\winjs-4.0.1\css\ui-light.css" />
     <Content Include="lib\winjs-4.0.1\css\ui-dark.css" />
+    <Content Include="pages\chartPage.html" />
     <Content Include="pages\home.html" />
     <None Include="WalutyJS3_TemporaryKey.pfx" />
   </ItemGroup>
