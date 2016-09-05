@@ -8,18 +8,54 @@
     <script src="lib/winjs-4.0.1/js/ui.js"></script>
     <link href="css/default.css" rel="stylesheet" />
     <script src="js/navigator.js"></script>
+    <script src="js/Chart.js"></script>
 
 </head>
 <body class="win-type-body">
+    <div id="navBar" data-win-control="WinJS.UI.NavBar">
+        <div id="globalNav" data-win-control="WinJS.UI.NavBarContainer">
+            <div data-win-control="WinJS.UI.NavBarCommand"
+                 data-win-options="{
+				    label: 'Home',
+                    tooltip: 'Take me home',
+                    id:'homeButton',
+                    icon: WinJS.UI.AppBarIcon.home,
+                    location: '/pages/home.html',
+                  }">
+            </div>
+            <div data-win-control="WinJS.UI.NavBarCommand"
+                 data-win-options="{
+                    label: 'Back',
+                    tooltip: 'Back to previous page',
+                    id:'backButton',
+                    icon: WinJS.UI.AppBarIcon.back,
+                    location: '/pages/home.html'
+                  }">
+            </div>
+            <div id="exitButton" data-win-control="WinJS.UI.NavBarCommand"
+                 data-win-options="{
+				    label: 'Exit',
+                    tooltip: 'Close app',
+                    id:'exitButton',
+                    icon: WinJS.UI.AppBarIcon.cancel,
+                    action: 'exit',
+                  }">
+            </div>
+        </div>
+    </div>
+    <br /><br />
     <div>Content goes here!</div>
+
     <div id="contenthost" data-win-control="Application.PageControlNavigator"
          data-win-options="{home: '/pages/home.html'}"></div>
 
-    <select class="form-control" id="year-select"></select>
-
+    <!--<div id="contenthost-page2" data-win-control="Application.PageControlNavigator"
+         data-win-options="{chartPage: '/pages/chartPage.html'}"></div>-->
+    
 
     <script src="js/main.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/chartPage.js"></script>
 </body>
 
 </html>
