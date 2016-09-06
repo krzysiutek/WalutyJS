@@ -18,7 +18,7 @@
     <div>
         <select class="form-control" id="year-select" onChange="onYearSelection()"></select>
         <select class="form-control" id="date-select" onChange="onDateSelection()"></select>
-        <button class="win-button" id="confirm-date-button"></button>
+        <button class="win-button" id="confirm-date-button">Zatwierdź</button>
     </div>
     <div class="waiting-text" id="waitingText">Pobieranie danych. Proszę czekać...</div>
 
@@ -55,29 +55,6 @@
             }">
         </div>
     </div>
-
-        <!-- Simple template for the ListView instantiation  -->
-        <!--<div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
-                <div class="smallListIconTextItem">
-                    <img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
-                    <div class="smallListIconTextItem-Detail">
-                        <h4 class="win-h4" data-win-bind="textContent: title"></h4>
-                        <h6 class="win-h6" data-win-bind="textContent: text"></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div id="listView"
-             class="win-selectionstylefilled"
-             data-win-control="WinJS.UI.ListView"
-             data-win-options="{
-                    itemDataSource: Sample.ListView.data.dataSource,
-                    itemTemplate: select('.smallListIconTextTemplate'),
-                    selectionMode: 'none',
-                    tapBehavior: 'none',
-                    layout: { type: WinJS.UI.ListLayout }
-            }">
-        </div>-->
 
 </body>
 </html>

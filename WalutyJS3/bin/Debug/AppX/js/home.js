@@ -1,9 +1,10 @@
 ﻿'use strict';
 
+var BASE_DATES_URL = "http://www.nbp.pl/kursy/xml/";
+var httpClient;
+
 (function () {
 
-    var httpClient;
-    var BASE_DATES_URL = "http://www.nbp.pl/kursy/xml/";
     var dates = [];
     var xmlNames = [];
     var dateSelect, yearSelect, confirmButton, listView;
@@ -52,16 +53,26 @@
         var xmlData;
         var i;
 
-        httpClient = new XMLHttpRequest();
-        httpClient.open('GET', xmlUrl, false);
-        httpClient.send();
+        //httpClient = new XMLHttpRequest();
+        //httpClient.open('GET', xmlUrl, false);
+        //httpClient.send();
+        WinJS.xhr({
+            url: "http://www.nbp.pl/kursy/xml/a163z160824.xml",
+            responseType: "document"
+        }).done(
 
-        xmlData = httpClient.responseXML;
-        
-        //TODO: check how to save responseXML as xml file 
-        saveXmlFile(xmlData, xmlName);
+            // When the result has completed, check the status.
+            function completed(result) {
+                if (result.status === 200) {
 
-        parseXmlFile(xmlData);
+                    xmlData = result.responseXML;
+                }
+
+                //TODO: check how to save responseXML as xml file 
+                saveXmlFile(xmlData, xmlName);
+
+                parseXmlFile(xmlData);
+            });
     }
 
     function getXmlFile(fileName) {
@@ -163,7 +174,7 @@
             var option = document.createElement('option');
             
             option.value = xmlNames[i];
-            console.log("XML NAME " + xmlNames[i]);
+            //console.log("XML NAME " + xmlNames[i]);
             option.text = dates[i];
 
             dateSelect.appendChild(option);
@@ -199,12 +210,18 @@
 
     }
 
-    function listItemSelected() {
+    function listItemSelected(data) {
         //WinJS.UI.Pages.define('/pages/chartPage.html', {
         //    ready: function (element, options) {
         console.log("HELLO");
-        
-        WinJS.Navigation.navigate("/pages/chartPage.html");
+        var item = listView.itemDataSource.list.getAt(event.detail.itemIndex);
+        WinJS.Navigation.navigate("/pages/chartPage.html",
+            {
+                years: yearSelect.options,
+                currencyName: item.name,
+                currencyCode: item.code
+            }
+        );
         //    }
         //})
         //return nav.navigate(Application.navigator.chartPage);
