@@ -10,47 +10,59 @@
 
 </head>
 <body>
-    <div>Content goes here MADAFAKING PEJDŻ HOMEE!!!.</div>
-    <div id="some-div" style="visibility:visible">
-        <progress class="win-progress-ring"></progress>
-    </div>
-
     <div>
-        <select class="form-control" id="year-select" onChange="onYearSelection()"></select>
-        <select class="form-control" id="date-select" onChange="onDateSelection()"></select>
-        <button class="win-button" id="confirm-date-button">Zatwierdź</button>
+        <div class="date-items">
+            <label>Wybierz rok i datę</label>
+            <select class="form-control" id="year-select" onChange="onYearSelection()"></select>
+            <select class="form-control" id="date-select" onChange="onDateSelection()"></select>
+            <button class="buttons win-button" id="confirm-date-button">Zatwierdź</button>
+        </div>
     </div>
-    <div class="waiting-text" id="waitingText">Pobieranie danych. Proszę czekać...</div>
-
-    <div id="sample">
+    <div id="loading-items" class="loading-items" style="visibility:visible;">
+        <div id="loading-indicator" class="loading-ring">
+            <progress class="win-progress-ring" style="width:100px; height:100px;"></progress>
+        </div>
+        <div class="waiting-text" id="waiting-text">Pobieranie danych. Proszę czekać...</div>
+    </div>
+    
+    <span class="title">
+        <span class="win-h4">Nazwa waluty</span>
+    </span>
+    <span class="code">
+        <span class="win-h6">Kod waluty</span>
+    </span>
+    <span class="converter">
+        <span class="win-h6">Przelicznik</span>
+    </span>
+    <span class="rate">
+        <span class="win-h6">Kurs średni</span>
+    </span>
+    
+    <div id="sample" class="list">
         <!-- Simple template for the ListView instantiation  -->
-        <div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template">
-            <div class="smallListIconTextItem">
-                <!--<img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />-->
-                
-                <span class="smallListIconTextItem-Detail title">
-                    <span class="win-h4" data-win-bind="innerText: name"></span>
-                </span>
-                <span class="smallListIconTextItem-Detail code">
-                    <span class="win-h6" data-win-bind="innerText: code"></span>
-                </span>
-                <span class="smallListIconTextItem-Detail converter">
-                    <span class="win-h6" data-win-bind="innerText: conversionRate"></span>
-                </span>
-                <span class="smallListIconTextItem-Detail rate">
-                    <span class="win-h6" data-win-bind="innerText: exchangeRate"></span>
-                </span>
-            </div>
+        <div class="listViewTemplate" data-win-control="WinJS.Binding.Template">
+            <span class="title ">
+                <span class="win-h4" data-win-bind="innerText: name"></span>
+            </span>
+            <span class="code">
+                <span class="win-h6" data-win-bind="innerText: code"></span>
+            </span>
+            <span class="converter">
+                <span class="win-h6" data-win-bind="innerText: conversionRate"></span>
+            </span>
+            <span class="rate">
+                <span class="win-h6" data-win-bind="innerText: exchangeRate"></span>
+            </span>
         </div>
 
         <!-- The declarative markup necesary for ListView instantiation -->
         <!-- Call WinJS.UI.processAll() in your initialization code -->
         <div id="listView"
-             class="win-selectionstylefilled"
+             class="win-listview"
              data-win-control="WinJS.UI.ListView"
              data-win-options="{
                 itemDataSource: Sample.ListView.data.dataSource,
-                itemTemplate: select('.smallListIconTextTemplate'),
+                itemTemplate: select('.listViewTemplate'),
                 layout: { type: WinJS.UI.ListLayout }
             }">
         </div>

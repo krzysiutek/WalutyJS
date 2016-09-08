@@ -18,25 +18,25 @@
                  data-win-options="{
 				    label: 'Home',
                     tooltip: 'Take me home',
-                    id:'homeButton',
+                    id:'home-button',
                     icon: WinJS.UI.AppBarIcon.home,
                     location: '/pages/home.html',
                   }">
             </div>
-            <div data-win-control="WinJS.UI.NavBarCommand"
+            <div id="back-button"
+                 data-win-control="WinJS.UI.NavBarCommand"
                  data-win-options="{
                     label: 'Back',
                     tooltip: 'Back to previous page',
-                    id:'backButton',
-                    icon: WinJS.UI.AppBarIcon.back,
-                    location: '/pages/home.html'
+                    id:'back-button',
+                    icon: WinJS.UI.AppBarIcon.back
                   }">
             </div>
-            <div id="exitButton" data-win-control="WinJS.UI.NavBarCommand"
+            <div id="exit-button" data-win-control="WinJS.UI.NavBarCommand"
                  data-win-options="{
 				    label: 'Exit',
                     tooltip: 'Close app',
-                    id:'exitButton',
+                    id:'exit-button',
                     icon: WinJS.UI.AppBarIcon.cancel,
                     action: 'exit',
                   }">

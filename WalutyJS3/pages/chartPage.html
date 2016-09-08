@@ -4,24 +4,29 @@
     <title></title>
 </head>
 <body>
-    <div>Content goes here MADAFAKA CHARTTTTTTTTTTT PAGE!!.</div>
-    <div>
-        <label>Wybierz rok i datę początkową</label>
-        <select class="form-control" id="start-year-select"></select>
-        <select class="form-control" id="start-date-select"></select>
+    <div style="display:inline-block">
+        <div class="start-items">
+            <label>Wybierz rok i datę początkową</label>
+            <select class="form-control" id="start-year-select"></select>
+            <select class="form-control" id="start-date-select"></select>
+        </div>
         <br />
-        <label>Wybierz rok i datę końcową</label>
-        <select class="form-control" id="end-year-select"></select>
-        <select class="form-control" id="end-date-select"></select>
-        <button class="win-button" id="confirm-date-button">Rysuj</button>
+        <div class="end-items">
+            <label>Wybierz rok i datę końcową</label>
+            <select class="form-control" id="end-year-select"></select>
+            <select class="form-control" id="end-date-select"></select>
+        </div>
     </div>
-
-    <div id="some-div" style="visibility:visible">
-        <progress class="win-progress-ring"></progress>
+    <button class="buttons win-button" id="confirm-date-button">Rysuj</button>
+    <div class="loading-items" id="loading-items2" style="visibility:visible;">
+        <div id="some-div" class="loading-ring">
+            <progress class="win-progress-ring" style="width:100px; height:100px;"></progress>
+        </div>
+        <div class="waiting-text" id="waiting-text">Wykres już prawie gotowy...</div>
     </div>
-
-    <canvas id="myChart" width="400" height="400" style="max-height: 500px; max-width: 1000px"></canvas>
-
+    <div class="chart">
+        <canvas id="myChart" width="400" height="400" style="max-height: 500px; max-width: 1000px"></canvas>
+    </div>
     <script src="js/Chart.min.js"></script>
 </body>
 </html>

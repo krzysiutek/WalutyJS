@@ -3,60 +3,49 @@
 (function () {
     var startYearSelect, endYearSelect, startDateSelect, endDateSelect, drawButton;
     var xmlNames = [];
-    var dates = [];
+    //var dates = [];
     var stateOptions;
     var currencyDates = [], currencyRates = [];
+    var loadingItems;
 
     function drawChart() {
         var ctx = document.getElementById("myChart");
 
-        // cos bierze zle i wysietla od 30 zamiast 28 na przyklad. Sprawdz indexy!!
+        loadingItems.style.visibility = 'hidden';
+
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
                 labels: currencyDates,
                 datasets: [{
-                    label: 'Wykres notowań dla: ' + stateOptions.currencyName,
+                    label: 'Hostoria notowań dla: ' + stateOptions.currencyName,
                     data: currencyRates,
                     fill: false,
                     lineTension: 0.1,
-                    backgroundColor: "rgba(75,192,192,0.4)",
+                    //backgroundColor: "rgba(75,192,192,0.4)",
                     borderColor: "rgba(75,192,192,1)",
-                    borderCapStyle: 'butt',
-                    borderDash: [],
-                    borderDashOffset: 0.0,
-                    borderJoinStyle: 'miter',
+                    //borderCapStyle: 'butt',
+                    //borderDash: [],
+                    //borderDashOffset: 0.0,
+                    //borderJoinStyle: 'miter',
                     pointBorderColor: "rgba(75,192,192,1)",
-                    pointBackgroundColor: "#fff",
-                    pointBorderWidth: 1,
-                    pointHoverRadius: 5,
-                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                    pointHoverBorderColor: "rgba(220,220,220,1)",
-                    pointHoverBorderWidth: 2,
-                    pointRadius: 1,
-                    pointHitRadius: 10,
-                    spanGaps: false,
-                
+                    //pointBackgroundColor: "#fff",
+                    //pointBorderWidth: 1,
+                    //pointHoverRadius: 5,
+                    //pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    //pointHoverBorderColor: "rgba(220,220,220,1)",
+                    //pointHoverBorderWidth: 2,
+                    //pointRadius: 1,
+                    //pointHitRadius: 10,
+                    //spanGaps: true
                 }]
             },
-            //options: {
-            //    showLines: true,
-            //    scales: {
-            //        yAxes: [{
-            //            ticks: {
-            //                beginAtZero: true,
-            //                max: currencyRates[0] + 1,
-            //                min: currencyRates[0] - 1,
-                            
-            //            }
-            //        }],
-            //        xAxes: [{
-            //            //ticks: {
-            //            //    //stepSize: currencyDates.length * 0.1,
-            //            //}
-            //        }]
-            //    }
-            //}
+            options: {
+                legend: {
+                    display: true,
+                    onClick: null
+                }
+            }
         });
     }
 
@@ -67,9 +56,9 @@
         currencyDates.length = 0;
         currencyRates.length = 0;
 
-        for (i = 0; i < endDateSelect.options.length; i++) {
+        for (i = 0; i < endDateSelect.options.length + 1; i++) {
 
-            xmlName = endDateSelect.options[i].value;
+            xmlName = startDateSelect.options[i].value;
 
             WinJS.xhr({
                 url: 'http://www.nbp.pl/kursy/xml/' + xmlName,
@@ -90,10 +79,11 @@
                     }
                 });
         }
+        loadingItems.style.visibility = 'visible';
         setTimeout(function () {
 
             drawChart();
-        }, 5000);
+        }, 4000);
     }
     
     function parseXML(xmlDocument) {
@@ -134,6 +124,9 @@
     }
 
     function getOnlyItemsWithA(items) {
+        xmlNames.length = 0;
+        dates.length = 0;
+
         var i, j = 0;
         for (i = 0; i < items.length; i++) {
             if (items[i].substring(0, 1) === 'a') {
@@ -166,16 +159,20 @@
             option.text = dates[i];
 
             startDateSelect.appendChild(option);
+            
         }
     }
 
     function onStartYearChanged() {
-        // TODO: remove it later only for now
+        // TODO: remove it later, only for now
         endYearSelect.text = startYearSelect.text;
         endYearSelect.value = startYearSelect.value;
 
         var selectedYear = startYearSelect.value;
-      
+
+        // clear endDateSelect options to prevent incorrect dates selection
+        endDateSelect.options.length = 0;
+       
         getDates(BASE_DATES_URL + selectedYear);
     }
 
@@ -216,23 +213,9 @@
 
 
         startYearSelect = document.getElementById('start-year-select');
-        for (i = 0; i < size; i++) {
-            option = document.createElement('option');
-
-            option.value = data.years[i].value;
-            option.text = data.years[i].text;
-            startYearSelect.appendChild(option);
-        }
         startYearSelect.addEventListener('change', onStartYearChanged);
 
         endYearSelect = document.getElementById('end-year-select');
-        for (i = 0; i < size; i++) {
-            option = document.createElement('option');
-
-            option.value = data.years[i].value;
-            option.text = data.years[i].text;
-            endYearSelect.appendChild(option);
-        }
         endYearSelect.addEventListener('change', onEndYearChanged);
 
         startDateSelect = document.getElementById('start-date-select');
@@ -243,6 +226,25 @@
 
         drawButton = document.getElementById('confirm-date-button');
         drawButton.addEventListener('click', prepareChartData);
+
+        loadingItems = document.getElementById('loading-items2');
+
+        for (i = 0; i < size; i++) {
+            option = document.createElement('option');
+
+            option.value = data.years[i].value;
+            option.text = data.years[i].text;
+            startYearSelect.appendChild(option);
+            startYearSelect.selectedIndex = 0;
+            onStartYearChanged();
+        }
+        for (i = 0; i < size; i++) {
+            option = document.createElement('option');
+
+            option.value = data.years[i].value;
+            option.text = data.years[i].text;
+            endYearSelect.appendChild(option);
+        }
 
     }
 

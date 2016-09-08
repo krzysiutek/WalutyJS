@@ -1,11 +1,11 @@
 ﻿var checkConnection;
+var sessionData = WinJS.Application.sessionState;
 (function () {
   'use strict';
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
 
     var nav = WinJS.Navigation
-    var sessionState = WinJS.Application.sessionState;
     
 
   app.onactivated = function (args) {
@@ -19,12 +19,19 @@
       args.setPromise(WinJS.UI.processAll().then(function() {
           // TODO: Your code here.
           
-          var exitButton = document.getElementById('exitButton');
+          var exitButton = document.getElementById('exit-button');
           exitButton.addEventListener('click', function () {
               console.log("Exit button clicked");
               // TODO: close app
           });
 
+          var backButton = document.getElementById('back-button');
+          backButton.addEventListener('click', function () {
+              var page = document.getElementById("contenthost").winControl.pageControl;
+              if (page.uri !== "ms-appx://" + Windows.ApplicationModel.Package.current.id.name + "/pages/home.html") {
+                  WinJS.Navigation.navigate("/pages/home.html");
+              }
+          });
 
           return nav.navigate(Application.navigator.home);
       }));
