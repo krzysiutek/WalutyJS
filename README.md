@@ -14,5 +14,5 @@ możliwość wyrysowania wykresu, przedstawijącego historię zmian kursu danej 
 
 Po powrocie do strony poprzedniej, ukazane są dane wcześniej na niej otwarte. 
 
-Dodatkową funkcjonalnością jest wysówany pasek menu, dzięki któremu możemy cofnąć się do poprzedniej strony lub zakończyć 
+Dodatkową funkcjonalnością jest wysuwany pasek menu, dzięki któremu możemy cofnąć się do poprzedniej strony lub zakończyć 
 działanie aplikacji.
