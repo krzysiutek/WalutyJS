@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Historia</title>
+</head>
+<body>
+    <div id="currency-name" class="currency-name">
+        Wykres notowań dla:
+        <span data-win-bind="innerText: currencyName"></span>
+    </div>
+    <div style="display:inline-block">
+        <div class="start-items" id="year-items">
+            <label>Wybierz rok</label>
+            <select class="form-control" id="start-year-select"></select>
+        </div>
+        <div class="start-items">
+            <label>Wybierz datę początkową</label>
+            <select class="form-control" id="start-date-select"></select>
+        </div>
+        <div class="end-items">
+            <label>Wybierz datę końcową</label>
+            <select class="form-control" id="end-date-select"></select>
+        </div>
+    </div>
+    <button class="buttons win-button" id="confirm-date-button">Rysuj</button>
+    <div class="loading-items" id="loading-items2" style="visibility:hidden;">
+        <div id="some-div" class="loading-ring">
+            <progress class="win-progress-ring" style="width:100px; height:100px;"></progress>
+        </div>
+        <div class="waiting-text" id="waiting-text">Wykres już prawie gotowy...</div>
+    </div>
+    <div class="loading-items" id="waiting-items2" style="visibility:visible;">
+        <div id="some-div" class="loading-ring">
+            <progress class="win-progress-ring" style="width:100px; height:100px;"></progress>
+        </div>
+        <div class="waiting-text" id="waiting-text">Wybierz przedział datowy i zatwierdź</div>
+    </div>
+    <div class="chart">
+        <canvas id="myChart" width="400" height="400" style="max-height: 470px; max-width: 1000px"></canvas>
+    </div>
+    <script src="js/Chart.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-GTF378P</Machine>
+    <WindowsUser>Krzysiek</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>6d4e4ed1-1ccc-4bdd-af28-fd37b648fed7</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\bld\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>E4CA2A8E887C9A20BB08BBAD005FB43EC7F7F0E9B10ADB4D56D8519D1C547079</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>6d4e4ed1-1ccc-4bdd-af28-fd37b648fed7_1.0.0.0_neutral__rgfnah4wmhgyp</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>6d4e4ed1-1ccc-4bdd-af28-fd37b648fed7_rgfnah4wmhgyp!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>6d4e4ed1-1ccc-4bdd-af28-fd37b648fed7</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Krzysiek</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-09-12T20:52:16.130</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\images\splashscreen.scale-400.png">
+      <PackagePath>images\splashscreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-09-12T20:31:49.087</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2015-07-20T17:06:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-09-12T20:31:49.087</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <Modified>2015-07-20T17:06:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-20T17:06:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-20T17:06:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\images\StoreLogo.png">
+      <PackagePath>images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-20T17:06:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-20T17:06:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\index.html">
+      <PackagePath>index.html</PackagePath>
+      <Modified>2016-09-12T20:12:29.268</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\pages\chartPage.html">
+      <PackagePath>pages\chartPage.html</PackagePath>
+      <Modified>2016-09-12T20:01:17.008</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\pages\home.html">
+      <PackagePath>pages\home.html</PackagePath>
+      <Modified>2016-09-12T20:05:55.298</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\js\Chart.min.js">
+      <PackagePath>js\Chart.min.js</PackagePath>
+      <Modified>2016-09-05T21:49:08.638</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\js\chartPage.js">
+      <PackagePath>js\chartPage.js</PackagePath>
+      <Modified>2016-09-12T20:05:14.821</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\js\home.js">
+      <PackagePath>js\home.js</PackagePath>
+      <Modified>2016-09-12T20:45:25.804</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\js\main.js">
+      <PackagePath>js\main.js</PackagePath>
+      <Modified>2016-09-12T19:30:43.995</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\js\navigator.js">
+      <PackagePath>js\navigator.js</PackagePath>
+      <Modified>2016-08-24T19:18:20.216</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\lib\winjs-4.0.1\js\base.js">
+      <PackagePath>lib\winjs-4.0.1\js\base.js</PackagePath>
+      <Modified>2016-04-18T16:42:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\lib\winjs-4.0.1\js\ui.js">
+      <PackagePath>lib\winjs-4.0.1\js\ui.js</PackagePath>
+      <Modified>2016-04-18T16:42:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2016-09-12T20:01:46.783</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\lib\winjs-4.0.1\css\ui-light.css">
+      <PackagePath>lib\winjs-4.0.1\css\ui-light.css</PackagePath>
+      <Modified>2016-04-18T16:42:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\lib\winjs-4.0.1\css\ui-dark.css">
+      <PackagePath>lib\winjs-4.0.1\css\ui-dark.css</PackagePath>
+      <Modified>2016-04-18T16:42:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Krzysiek\Documents\Visual Studio 2015\Projects\WalutyJS\WalutyJS\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2016-09-12T20:52:15.893</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
